@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box hide and show using js</title>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: rosybrown;
+        }
+    </style>
+    <script>
+        function hideshow() {
+            var boxElement =document.getElementById("box");
+            if(boxElement.style.display=="none")
+            {
+                boxElement.style.display="block";
+                        }
+                    else {
+                            boxElement.style.display="none";     
+                            }
+            
+            //alert("hide");
+        }
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+    <button id="hide" onclick="hideshow()">Hide/show</button>
+    
+</body>
+</html>
