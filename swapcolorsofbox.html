@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swapping the color of boxes</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: white;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            border: 3px solid black;
+            cursor: pointer;
+        }
+        #box1 {
+            background-color: green;
+        }
+        #box2 {
+            background-color: white;
+        }
+    </style>
+    <script>
+        function swapColors() {
+            var box1 = document.getElementById("box1");
+            var box2 = document.getElementById("box2");
+            var box1Color = window.getComputedStyle(box1).backgroundColor;
+            var box2Color = window.getComputedStyle(box2).backgroundColor;
+            box1.style.backgroundColor = box2Color;
+            box2.style.backgroundColor = box1Color;
+        }
+    </script>
+</head>
+<body>
+    <div id="box1" class="box" onclick="swapColors()"></div>
+    <div id="box2" class="box" onclick="swapColors()"></div>
+</body>
+</html>
